@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function OpenTime() {
   return (
-    <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5 bg-black text-white lg:p-10 lg:my-10 rounded justify-items-center ">
+    <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-5 bg-black text-white lg:p-10 p-5 lg:my-10 my-3 rounded justify-items-center ">
       <div className="flex items-center gap-2">
         <FontAwesomeIcon className="w-8 text-primary" icon={faCalendarDays} />
         <div>

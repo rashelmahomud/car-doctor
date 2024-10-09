@@ -51,8 +51,8 @@ export default function Banner() {
               }.jpg)`,
             }}
           >
-            <div className="place-content-center mx-auto ml-20 px-5">
-              <h1 className="text-6xl font-bold text-white w-1/2">
+            <div className="place-content-center mx-auto lg:ml-20 ml-3 lg:px-5 px-2">
+              <h1 className="lg:text-6xl text-2xl font-bold text-white w-1/2">
                 {banner.title}
               </h1>
               <p className="text-xl font-semibold text-white mt-3 w-1/2">
