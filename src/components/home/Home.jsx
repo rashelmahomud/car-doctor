@@ -1,6 +1,7 @@
 import About from "./About";
 import Banner from "./Banner";
 import ChooseUs from "./ChooseUs";
+import CustomerSay from "./CustomerSay";
 import OpenTime from "./OpenTime";
 import OurTeam from "./OurTeam";
 import PopularProduct from "./PopularProduct";
@@ -16,6 +17,7 @@ export default function Home() {
       <PopularProduct />
       <OurTeam />
       <ChooseUs />
+      <CustomerSay />
     </div>
   );
 }
