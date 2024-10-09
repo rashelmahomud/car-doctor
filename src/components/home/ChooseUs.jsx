@@ -10,12 +10,12 @@ export default function ChooseUs() {
         <p className="text-gray-500">
           the majority have suffered alteration in some form, by injected
           humour, or randomised <br /> words which don't look even slightly
-          believable.{" "}
+          believable.
         </p>
       </div>
       <div className="grid grid-cols-2  lg:grid-cols-6 place-items-center my-5  gap-6">
         <Link href="#">
-          <div className="border btn-outline btn-primary:hover rounded w-40 h-40 p-4 text-center box-content">
+          <div className="border  rounded w-40 h-40 p-4 text-center box-content hover:bg-primary hover:text-white transition-all">
             <Image
               src={"/assets/icons/group.svg"}
               width={200}
@@ -26,7 +26,7 @@ export default function ChooseUs() {
           </div>
         </Link>
         <Link href="#" className="btn-outline btn-primary rounded">
-          <div className="border btn-outline btn-primary rounded w-40 h-40 p-4 text-center box-content">
+          <div className="border rounded w-40 h-40 p-4 text-center box-content hover:bg-primary hover:text-white transition-all">
             <Image
               className="mx-auto"
               src={"/assets/icons/check.svg"}
@@ -38,7 +38,7 @@ export default function ChooseUs() {
           </div>
         </Link>
 
-        <div className="border btn-outline btn-primary rounded w-40 h-40 p-4 text-center box-content">
+        <div className="border rounded w-40 h-40 p-4 text-center box-content hover:bg-primary hover:text-white transition-all">
           <Image
             className="mx-auto"
             src={"/assets/icons/quote.svg"}
@@ -49,7 +49,7 @@ export default function ChooseUs() {
           <h2 className="text-sx font-semibold">24/7 Support</h2>
         </div>
 
-        <div className="border btn-outline btn-primary rounded w-40 h-40 p-4 text-center box-content">
+        <div className="border rounded w-40 h-40 p-4 text-center box-content hover:bg-primary hover:text-white transition-all">
           <Image
             className="mx-auto"
             src={"/assets/icons/Wrench.svg"}
@@ -60,7 +60,7 @@ export default function ChooseUs() {
           <h2 className="text-sx font-semibold">24/7 Support</h2>
         </div>
 
-        <div className="border btn-outline btn-primary rounded w-40 h-40 p-4 text-center box-content">
+        <div className="border rounded w-40 h-40 p-4 text-center box-content hover:bg-primary hover:text-white transition-all">
           <Image
             className="mx-auto"
             src={"/assets/icons/group.svg"}
@@ -70,7 +70,7 @@ export default function ChooseUs() {
           />
           <h2 className="text-sx font-semibold">24/7 Support</h2>
         </div>
-        <div className="border btn-outline btn-primary rounded w-40 h-40 p-4 text-center box-content">
+        <div className="border rounded w-40 h-40 p-4 text-center box-content hover:bg-primary hover:text-white transition-all">
           <Image
             className="mx-auto"
             src={"/assets/icons/deliveryt.svg"}
