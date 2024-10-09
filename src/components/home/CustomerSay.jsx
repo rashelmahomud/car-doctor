@@ -1,6 +1,10 @@
+import { faStar } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image";
+
 export default function CustomerSay() {
   return (
-    <div className="container mx-auto my-10">
+    <div className="container mx-auto lg:p-10 p-3">
       <div className="text-center">
         <span className="font-semibold">Testimonial</span>
         <h2 className="text-4xl font-bold">What Customer Say</h2>
@@ -12,45 +16,417 @@ export default function CustomerSay() {
       </div>
       <div className="my-10">
         <div className="carousel w-full">
-          <div id="item1" className="flex justify-between carousel-item w-full">
+          <div
+            id="item1"
+            className="flex justify-between lg:gap-28 gap-5 carousel-item w-full lg:p-10"
+          >
             <div>
-              <h1>Awlad Hossain</h1>
-              <h2> Businessman</h2>
-              <p>
+              <div className="flex justify-items-center gap-5 lg:p-5 p-3">
+                <div className="avatar online">
+                  <div className="w-12 rounded-full">
+                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  </div>
+                </div>
+                <div>
+                  <h1>Md Rashel</h1>
+                  <h2> Software Enginear</h2>
+                </div>
+                <Image
+                  className="opacity-5 "
+                  width={60}
+                  height={12}
+                  src={"/assets/icons/quote.svg"}
+                  alt="logo"
+                />
+              </div>
+              <p className="my-3">
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form, by
                 injected humour, or randomised words which don't look even
                 slightly believable.
               </p>
+              <div className="flex gap-1">
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+              </div>
             </div>
             <div>
-              <h1>Awlad Hossain</h1>
-              <h2> Businessman</h2>
-              <p>
+              <div>
+                <div className="flex justify-items-center gap-5 lg:p-5 p-3">
+                  <div className="avatar online">
+                    <div className="w-12 rounded-full">
+                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    </div>
+                  </div>
+                  <div>
+                    <h1>Awlad Hossain</h1>
+                    <h2> Businessman</h2>
+                  </div>
+                  <Image
+                    className="opacity-5 "
+                    width={60}
+                    height={12}
+                    src={"/assets/icons/quote.svg"}
+                    alt="logo"
+                  />
+                </div>
+                <p className="my-3">
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable.
+                </p>
+                <div className="flex gap-1">
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            id="item2"
+            className="flex justify-between lg:gap-28 gap-5 carousel-item w-full lg:p-10"
+          >
+            <div>
+              <div className="flex justify-items-center gap-5 lg:p-5 p-3">
+                <div className="avatar online">
+                  <div className="w-12 rounded-full">
+                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  </div>
+                </div>
+                <div>
+                  <h1>Awlad Hossain</h1>
+                  <h2> Businessman</h2>
+                </div>
+                <Image
+                  className="opacity-5 "
+                  width={60}
+                  height={12}
+                  src={"/assets/icons/quote.svg"}
+                  alt="logo"
+                />
+              </div>
+              <p className="my-3">
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form, by
                 injected humour, or randomised words which don't look even
                 slightly believable.
               </p>
+              <div className="flex gap-1">
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+              </div>
+            </div>
+            <div>
+              <div>
+                <div className="flex justify-items-center gap-5 lg:p-5 p-3">
+                  <div className="avatar online">
+                    <div className="w-12 rounded-full">
+                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    </div>
+                  </div>
+                  <div>
+                    <h1>Awlad Hossain</h1>
+                    <h2> Businessman</h2>
+                  </div>
+                  <Image
+                    className="opacity-5 "
+                    width={60}
+                    height={12}
+                    src={"/assets/icons/quote.svg"}
+                    alt="logo"
+                  />
+                </div>
+                <p className="my-3">
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable.
+                </p>
+                <div className="flex gap-1">
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          <div id="item2" className="carousel-item w-full">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
-              className="w-full"
-            />
+          <div
+            id="item3"
+            className="flex justify-between lg:gap-28 gap-5 carousel-item w-full lg:p-10"
+          >
+            <div>
+              <div className="flex justify-items-center gap-5 lg:p-5 p-3">
+                <div className="avatar online">
+                  <div className="w-12 rounded-full">
+                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  </div>
+                </div>
+                <div>
+                  <h1>Awlad Hossain</h1>
+                  <h2> Businessman</h2>
+                </div>
+                <Image
+                  className="opacity-5 "
+                  width={60}
+                  height={12}
+                  src={"/assets/icons/quote.svg"}
+                  alt="logo"
+                />
+              </div>
+              <p className="my-3">
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised words which don't look even
+                slightly believable.
+              </p>
+              <div className="flex gap-1">
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+              </div>
+            </div>
+            <div>
+              <div>
+                <div className="flex justify-items-center gap-5 lg:p-5 p-3">
+                  <div className="avatar online">
+                    <div className="w-12 rounded-full">
+                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    </div>
+                  </div>
+                  <div>
+                    <h1>Tamanna Khanom</h1>
+                    <h2> Businessman</h2>
+                  </div>
+                  <Image
+                    className="opacity-5 "
+                    width={60}
+                    height={12}
+                    src={"/assets/icons/quote.svg"}
+                    alt="logo"
+                  />
+                </div>
+                <p className="my-3">
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable.
+                </p>
+                <div className="flex gap-1">
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div id="item3" className="carousel-item w-full">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
-              className="w-full"
-            />
-          </div>
-          <div id="item4" className="carousel-item w-full">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
-              className="w-full"
-            />
+          <div
+            id="item4"
+            className="flex justify-between lg:gap-28 gap-5 carousel-item w-full lg:p-10"
+          >
+            <div>
+              <div className="flex justify-items-center gap-5 lg:p-5 p-3">
+                <div className="avatar online">
+                  <div className="w-12 rounded-full">
+                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  </div>
+                </div>
+                <div>
+                  <h1>Towhida Khanom</h1>
+                  <h2> Businessman</h2>
+                </div>
+                <Image
+                  className="opacity-5 "
+                  width={60}
+                  height={12}
+                  src={"/assets/icons/quote.svg"}
+                  alt="logo"
+                />
+              </div>
+              <p className="my-3">
+                There are many variations of passages of Lorem Ipsum available,
+                but the majority have suffered alteration in some form, by
+                injected humour, or randomised words which don't look even
+                slightly believable.
+              </p>
+              <div className="flex gap-1">
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+                <FontAwesomeIcon
+                  className="w-5 text-yellow-500"
+                  icon={faStar}
+                />
+              </div>
+            </div>
+            <div>
+              <div>
+                <div className="flex justify-items-center gap-5 lg:p-5 p-3">
+                  <div className="avatar online">
+                    <div className="w-12 rounded-full">
+                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    </div>
+                  </div>
+                  <div>
+                    <h1>Rashel mahomud</h1>
+                    <h2> Businessman</h2>
+                  </div>
+                  <Image
+                    className="opacity-5 "
+                    width={60}
+                    height={12}
+                    src={"/assets/icons/quote.svg"}
+                    alt="logo"
+                  />
+                </div>
+                <p className="my-3">
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable.
+                </p>
+                <div className="flex gap-1">
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                  <FontAwesomeIcon
+                    className="w-5 text-yellow-500"
+                    icon={faStar}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div className="flex w-full justify-center gap-2 py-2">
