@@ -8,6 +8,7 @@ import {
   faGoogle,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import SocialSignIn from "@/components/shared/SocialSignIn";
 
 export default function LoginPage() {
   const handleSubmit = async (e) => {
@@ -66,7 +67,7 @@ export default function LoginPage() {
           >
             Submit
           </button>
-
+          <SocialSignIn />
           <div>
             <Link href="/signup" className="text-center text-primary">
               Regestart Account

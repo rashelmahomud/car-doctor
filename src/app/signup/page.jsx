@@ -1,4 +1,5 @@
 "use client";
+import SocialSignIn from "@/components/shared/SocialSignIn";
 import {
   faGithub,
   faGoogle,
@@ -79,14 +80,7 @@ export default function SignUp() {
           >
             Singup
           </button>
-          <div className="flex lg:space-x-10 justify-center items-center gap-3 p-3 ">
-            <FontAwesomeIcon className="w-5 btn btn-outline" icon={faGoogle} />
-            <FontAwesomeIcon className="w-5 btn btn-outline" icon={faGithub} />
-            <FontAwesomeIcon
-              className="w-5 btn btn-outline"
-              icon={faLinkedin}
-            />
-          </div>
+          <SocialSignIn />
           <div className="text-center">
             <Link href="/login" className="font-semibold text-primary">
               Have a Account
