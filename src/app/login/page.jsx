@@ -2,6 +2,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faGithub,
+  faGoogle,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function LoginPage() {
   const handleSubmit = async (e) => {
@@ -60,6 +66,7 @@ export default function LoginPage() {
           >
             Submit
           </button>
+
           <div>
             <Link href="/signup" className="text-center text-primary">
               Regestart Account

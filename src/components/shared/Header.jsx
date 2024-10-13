@@ -80,9 +80,9 @@ export default function Header() {
             className="w-5 text-gray-500"
             icon={faMagnifyingGlass}
           />
-
+          <button className="btn btn-outline btn-primary">Appoinment</button>
           {data?.user?.email ? (
-            <button className="btn btn-outline btn-primary">Appoinment</button>
+            <button className="btn btn-outline btn-primary">LogOut</button>
           ) : (
             <button className="btn btn-outline btn-primary">
               <Link href="/login">Login</Link>

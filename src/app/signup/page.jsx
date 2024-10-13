@@ -1,4 +1,10 @@
 "use client";
+import {
+  faGithub,
+  faGoogle,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -73,6 +79,14 @@ export default function SignUp() {
           >
             Singup
           </button>
+          <div className="flex lg:space-x-10 justify-center items-center gap-3 p-3 ">
+            <FontAwesomeIcon className="w-5 btn btn-outline" icon={faGoogle} />
+            <FontAwesomeIcon className="w-5 btn btn-outline" icon={faGithub} />
+            <FontAwesomeIcon
+              className="w-5 btn btn-outline"
+              icon={faLinkedin}
+            />
+          </div>
           <div className="text-center">
             <Link href="/login" className="font-semibold text-primary">
               Have a Account
