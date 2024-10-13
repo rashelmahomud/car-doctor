@@ -3,7 +3,27 @@ import Image from "next/image";
 import Link from "next/link";
 
 export default function SignUp() {
-  const handelSignUp = () => {};
+  const handelSignUp = async (e) => {
+    e.preventDefault();
+    const newUser = {
+      name: e.target.name.value,
+      email: e.target.email.value,
+      password: e.target.password.value,
+    };
+    const resp = await fetch("http://localhost:3000/signup/api", {
+      method: "POST",
+      body: JSON.stringify(newUser),
+      headers: {
+        "content-type": "application/json",
+      },
+    });
+    // console.log(resp);
+    if (resp.status === 200) {
+      e.target.reset();
+      window.location.href = "/";
+    }
+  };
+
   return (
     <div className="container mx-auto my-16 grid grid-cols-1 lg:grid-cols-2 justify-center place-items-center">
       <div>

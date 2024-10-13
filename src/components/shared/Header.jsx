@@ -1,12 +1,17 @@
+"use client";
 import {
   faMagnifyingGlass,
   faCartShopping,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Header() {
+  const session = useSession();
+  const { data } = session;
+
   const links = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
@@ -76,7 +81,13 @@ export default function Header() {
             icon={faMagnifyingGlass}
           />
 
-          <button className="btn btn-outline btn-primary">Appoinment</button>
+          {data?.user?.email ? (
+            <button className="btn btn-outline btn-primary">Appoinment</button>
+          ) : (
+            <button className="btn btn-outline btn-primary">
+              <Link href="/login">Login</Link>
+            </button>
+          )}
         </div>
       </div>
     </div>

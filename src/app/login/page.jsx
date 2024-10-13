@@ -1,10 +1,24 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
 
 export default function LoginPage() {
-  const handleSubmit = (e) => {
-    e.preventDefoult();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const email = e.target.email.value;
+    const password = e.target.password.value;
+    const resp = await signIn("credentials", {
+      email,
+      password,
+      redirect: false,
+    });
+    if (resp.status === 200) {
+      e.target.reset();
+      window.location.href = "/";
+    }
+
+    return resp;
   };
 
   return (
