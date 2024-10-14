@@ -1,15 +1,27 @@
+"use client";
 import {
   faGithub,
   faGoogle,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
-const SocialSignIn = () => {
+const SocialSignin = () => {
+  const router = useRouter();
+  const { status } = useSession();
   const handelSocialLogin = async (provider) => {
     const resp = signIn(provider);
   };
+
+  useEffect(() => {
+    if (status === "authenticated") {
+      router.push("/");
+    }
+  }, [router, status]);
+
   return (
     <div className="flex lg:space-x-10 justify-center items-center gap-3 p-3 ">
       <FontAwesomeIcon
@@ -27,4 +39,4 @@ const SocialSignIn = () => {
   );
 };
 
-export default SocialSignIn;
+export default SocialSignin;

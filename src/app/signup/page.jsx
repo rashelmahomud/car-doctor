@@ -1,5 +1,5 @@
 "use client";
-import SocialSignIn from "@/components/shared/SocialSignIn";
+import SocialSignIn from "@/components/shared/SocialSignin";
 import {
   faGithub,
   faGoogle,
@@ -8,9 +8,11 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function SignUp() {
   const handelSignUp = async (e) => {
+    const router = useRouter();
     e.preventDefault();
     const newUser = {
       name: e.target.name.value,
@@ -27,7 +29,7 @@ export default function SignUp() {
     // console.log(resp);
     if (resp.status === 200) {
       e.target.reset();
-      window.location.href = "/";
+      router.push("/");
     }
   };
 

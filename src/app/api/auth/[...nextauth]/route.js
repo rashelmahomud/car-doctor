@@ -47,9 +47,33 @@ const handler = NextAuth({
       clientSecret: process.env.NEXT_PUBLIC_GITHUB_CLIENT_SECRET,
     }),
   ],
-  callbacks: {},
+
   pages: {
     signIn: "/login",
+  },
+
+  callbacks: {
+    async signIn({ user, account }) {
+      if (account.provider === "google" || account.provider === "github") {
+        const { name, email } = user;
+
+        try {
+          const db = await connectDB();
+          const userCollection = await db.collection("users");
+          const userExist = await userCollection.findOne({ email });
+          if (!userExist) {
+            const resp = await userCollection.insertOne(user);
+            return user;
+          } else {
+            return user;
+          }
+        } catch (error) {
+          console.log(error, "this error from post social your");
+        }
+      } else {
+        return user;
+      }
+    },
   },
 });
 

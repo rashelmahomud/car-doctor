@@ -8,9 +8,11 @@ import {
   faGoogle,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import SocialSignIn from "@/components/shared/SocialSignIn";
+import SocialSignIn from "@/components/shared/SocialSignin";
+import { useRouter } from "next/navigation";
 
 export default function LoginPage() {
+  const router = useRouter();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -22,7 +24,7 @@ export default function LoginPage() {
     });
     if (resp.status === 200) {
       e.target.reset();
-      window.location.href = "/";
+      router.push("/");
     }
 
     return resp;
