@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const CardServices = ({ service }) => {
-  const { title, img, price } = service;
+  const { title, img, price, _id } = service;
 
   return (
     <div className="card bg-base-100 w-96 shadow-xl">
@@ -24,7 +24,7 @@ const CardServices = ({ service }) => {
           <div className="  text-2xl font-semibold">Price: ${price}</div>
 
           <div className="justify-end">
-            <Link href="/about">
+            <Link href={`/services/${_id}`}>
               <FontAwesomeIcon className="w-5 " icon={faArrowRight} />
             </Link>
           </div>
