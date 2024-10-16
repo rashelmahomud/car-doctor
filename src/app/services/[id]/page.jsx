@@ -1,6 +1,6 @@
 import ServiceFecility from "@/components/card/ServiceFecility";
 import { getServiceDetails } from "@/lib/getService";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
@@ -117,38 +117,111 @@ const SearviceDetails = async ({ params }) => {
             </div>
           </div>
         </div>
-        <div className="bg-gray-400 p-8 my-5 rounded">
-          <ul className="flex flex-col gap-3">
-            <li className="text-2xl my-3 font-semibold">Services</li>
-            <li className="flex justify-between btn hover:bg-primary hover:text-white border-none">
-              <Link href="/">Full Car Repair</Link>
+        <div className="">
+          <div className="p-8 my-5 rounded bg-gray-200">
+            <ul className="flex flex-col gap-3 ">
+              <li className="text-2xl my-3 font-semibold">Services</li>
+              <li className="flex justify-between btn  bg-primary text-white border-none">
+                <Link href="/">Full Car Repair</Link>
+                <FontAwesomeIcon
+                  className="w-5 text-white"
+                  icon={faArrowRight}
+                />
+              </li>
+              <li className="flex justify-between btn bg-white hover:bg-primary hover:text-white border-none">
+                <Link href="/">Battery Charge</Link>
+                <FontAwesomeIcon
+                  className="w-5 text-primary"
+                  icon={faArrowRight}
+                />
+              </li>
+              <li className="flex justify-between btn bg-white hover:bg-primary hover:text-white border-none">
+                <Link href="/">Automatic Services</Link>
+                <FontAwesomeIcon
+                  className="w-5 text-primary"
+                  icon={faArrowRight}
+                />
+              </li>
+              <li className="flex justify-between btn bg-white hover:bg-primary hover:text-white border-none">
+                <Link href="/">Engine Repair</Link>
+                <FontAwesomeIcon
+                  className="w-5 text-primary"
+                  icon={faArrowRight}
+                />
+              </li>
+            </ul>
+          </div>
+          <div className="my-5 bg-black text-white rounded p-5">
+            <h1 className="text-2xl font-bold">Download</h1>
+            <div className="flex justify-between my-5">
+              <div className="flex justify-center items-center gap-3">
+                <FontAwesomeIcon
+                  className="w-5 text-primary"
+                  icon={faFilePdf}
+                />
+                <h1 className="font-semibold">
+                  Our Brochure <br />{" "}
+                  <span className="text-gray-400 font-normal">Download</span>
+                </h1>
+              </div>
               <FontAwesomeIcon
-                className="w-5 text-primary hover:text-white"
+                className="w-5 border-none btn bg-primary text-white"
                 icon={faArrowRight}
               />
-            </li>
-            <li className="flex justify-between btn hover:bg-primary hover:text-white border-none">
-              <Link href="/">Battery Charge</Link>
+            </div>
+            <div className="flex justify-between my-5">
+              <div className="flex justify-center items-center gap-3">
+                <FontAwesomeIcon
+                  className="w-5 text-primary"
+                  icon={faFilePdf}
+                />
+                <h1 className="font-semibold">
+                  Our Brochure <br />{" "}
+                  <span className="text-gray-400 font-normal">Download</span>
+                </h1>
+              </div>
               <FontAwesomeIcon
-                className="w-5 text-primary"
+                className="w-5 border-none btn bg-primary text-white"
                 icon={faArrowRight}
               />
-            </li>
-            <li className="flex justify-between btn hover:bg-primary hover:text-white border-none">
-              <Link href="/">Automatic Services</Link>
-              <FontAwesomeIcon
-                className="w-5 text-primary"
-                icon={faArrowRight}
-              />
-            </li>
-            <li className="flex justify-between btn hover:bg-primary hover:text-white border-none">
-              <Link href="/">Engine Repair</Link>
-              <FontAwesomeIcon
-                className="w-5 text-primary"
-                icon={faArrowRight}
-              />
-            </li>
-          </ul>
+            </div>
+          </div>
+          <div className="my-5 bg-black text-white rounded p-5">
+            <div className="text-center mx-auto">
+              <aside>
+                <Image
+                  height="11"
+                  width="11"
+                  className="w-24 mx-auto my-3 "
+                  src="/assets/logo.svg"
+                  alt="logo"
+                />
+              </aside>
+              <p>
+                Need Help? We Are Here <br /> To Help You
+              </p>
+            </div>
+            <div className="bg-white relative text-black p-5 m-10 rounded text-center">
+              <h3 className="text-primary font-bold">
+                Car Doctor <span className="text-black font-bold">Special</span>
+              </h3>
+              <h3 className="text-gray-500 font-bold my-3">
+                Save up to
+                <span className="text-primary font-bold"> 60% off</span>
+              </h3>
+            </div>
+            <button className="btn bg-primary border-none text-white absolute -mt-16 ml-40">
+              Get a Quote
+            </button>
+          </div>
+          <div>
+            <h2 className="font-semibold text-2xl my-3">Price ${price}</h2>
+            <Link href="/checkout">
+              <button className="btn bg-primary w-full text-white font-semibold">
+                Proceed Checkout
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
