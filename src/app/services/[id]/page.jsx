@@ -5,15 +5,20 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 
+export const metadata = {
+  title: "service details",
+  description: "service Details page",
+};
+
 const SearviceDetails = async ({ params }) => {
   const data = await getServiceDetails(params.id);
 
-  const { title, img, price, description, facility } = data.service;
+  const { _id, title, img, price, description, facility } = data.service;
   return (
     <div className="container mx-auto">
       <div className="relative  my-10">
         <Image
-          src={"/assets/images/banner/4.jpg"}
+          src={img}
           alt="Sample Image"
           width={600}
           height={400}
@@ -216,7 +221,7 @@ const SearviceDetails = async ({ params }) => {
           </div>
           <div>
             <h2 className="font-semibold text-2xl my-3">Price ${price}</h2>
-            <Link href="/checkout">
+            <Link href={`/checkout/${_id}`}>
               <button className="btn bg-primary w-full text-white font-semibold">
                 Proceed Checkout
               </button>
