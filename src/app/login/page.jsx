@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import SocialSignIn from "@/components/shared/SocialSignin";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -22,8 +23,12 @@ export default function LoginPage() {
       password,
       redirect: false,
     });
+    if (resp.ok) {
+      toast.success("successfully joined..");
+    }
     if (resp.status === 200) {
       e.target.reset();
+
       router.push("/");
     }
 
@@ -37,7 +42,7 @@ export default function LoginPage() {
           src={"/assets/images/login/login.svg"}
           width={320}
           height={320}
-          alt="login image"
+          alt="simple image"
         />
       </div>
       <div className="border-2 w-1/2 p-10 rounded">

@@ -80,7 +80,11 @@ export default function Header() {
             className="w-5 text-gray-500"
             icon={faMagnifyingGlass}
           />
-          <button className="btn btn-outline btn-primary">Appoinment</button>
+          {data?.user ? (
+            <button className="btn btn-outline btn-primary">Appoinment</button>
+          ) : (
+            ""
+          )}
           {data?.user?.email ? (
             <button
               onClick={() => signOut()}

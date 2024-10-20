@@ -1,16 +1,54 @@
+"use client";
 import { getServiceDetails } from "@/lib/getService";
+import { useSession } from "next-auth/react";
+import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const { default: Image } = require("next/image");
 
-export const metadata = {
+const metadata = {
   title: "service checkout",
   description: "car-doctor checkout details",
 };
 
 const CheckoutPage = async ({ params }) => {
-  const data = await getServiceDetails(params.id);
+  const { data } = useSession();
+  const [service, setService] = useState({});
 
-  const { _id, title, img, price, description, facility } = data.service;
+  const loadService = async () => {
+    const details = await getServiceDetails(params.id);
+    setService(details.service);
+  };
+  const { _id, title, img, price } = service || {};
+
+  const handelBooking = async (event) => {
+    event.preventDefault();
+    const newBooking = {
+      email: data?.user?.email,
+      name: data?.user?.name,
+      address: event.target.address.value,
+      phone: event.target.phone.value,
+      date: event.target.date.value,
+      serviceTitle: title,
+      serviceID: _id,
+      servicePrice: price,
+    };
+
+    const res = await fetch("http://localhost:3000/checkout/api/new-booking", {
+      method: "POST",
+      body: JSON.stringify(newBooking),
+      headers: { "content-type": "application/json" },
+    });
+    if (res.ok) {
+      toast.success("successfull booking your product");
+    } else {
+      toast.error("have some issu for this booking");
+    }
+  };
+
+  useEffect(() => {
+    loadService();
+  }, [params]);
   return (
     <div className="container mx-auto my-10">
       <div className="relative">
@@ -33,34 +71,61 @@ const CheckoutPage = async ({ params }) => {
           </button>
         </div>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:mx-20   bg-gray-400 rounded mt-10 lg:p-24 p-3">
-        <input
-          type="text"
-          className="bg-white px-5 border-none rounded py-3  items-end"
-          placeholder="First Name"
-        />
-        <input
-          type="text"
-          className="bg-white px-5 border-none rounded py-3 "
-          placeholder="First Name"
-        />
-        <input
-          type="text"
-          className="bg-white px-5 border-none rounded py-3"
-          placeholder="First Name"
-        />
-        <input
-          type="text"
-          className="bg-white px-5 border-none rounded py-3"
-          placeholder="First Name"
-        />
-        <textarea
-          className="textarea textarea-bordered col-span-2"
-          placeholder="your taxt"
-        ></textarea>
-        <button className="btn border-none col-span-2 text-white bg-primary w-full">
-          Order Confirm
-        </button>
+      <div>
+        <form
+          onSubmit={handelBooking}
+          className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:mx-20   bg-gray-400 rounded mt-10 lg:p-24 p-3"
+        >
+          <input
+            type="text"
+            defaultValue={data?.user?.name}
+            name="name"
+            className="bg-white px-5 border-none rounded py-3  items-end"
+            placeholder="First Name"
+          />
+          <input
+            type="date"
+            defaultValue={new Date().toString()}
+            name="date"
+            className="bg-white px-5 border-none rounded py-3 "
+            placeholder="date: "
+          />
+          <input
+            type="email"
+            name="email"
+            disabled
+            defaultValue={data?.user?.email}
+            className="bg-white px-5 border-none rounded py-3"
+            placeholder="Email:"
+          />
+          <input
+            type="number"
+            defaultValue={price}
+            name="price"
+            disabled
+            className="bg-white px-5 border-none rounded py-3"
+            placeholder="Due amaunt"
+          />
+          <input
+            type="phone"
+            name="phone"
+            className="bg-white px-5 border-none rounded py-3"
+            placeholder="phone:"
+          />
+          <input
+            type="address"
+            name="address"
+            className="bg-white px-5 border-none rounded py-3"
+            placeholder="current address:"
+          />
+
+          <button
+            type="submit"
+            className="btn border-none col-span-2 text-white bg-primary w-full"
+          >
+            Order Confirm
+          </button>
+        </form>
       </div>
     </div>
   );
