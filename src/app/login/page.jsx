@@ -25,6 +25,8 @@ export default function LoginPage() {
     });
     if (resp.ok) {
       toast.success("successfully joined..");
+    } else {
+      toast.error("have a some issus error");
     }
     if (resp.status === 200) {
       e.target.reset();

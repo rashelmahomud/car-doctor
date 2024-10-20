@@ -1,7 +1,6 @@
 "use client";
 import { getServiceDetails } from "@/lib/getService";
 import { useSession } from "next-auth/react";
-import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 const { default: Image } = require("next/image");
@@ -13,13 +12,14 @@ const metadata = {
 
 const CheckoutPage = async ({ params }) => {
   const { data } = useSession();
-  const [service, setService] = useState({});
+  // const [service, setService] = useState({});
 
-  const loadService = async () => {
-    const details = await getServiceDetails(params.id);
-    setService(details.service);
-  };
-  const { _id, title, img, price } = service || {};
+  // const loadService = async () => {
+  const details = await getServiceDetails(params.id);
+
+  // setService(details.service);
+  // };
+  const { _id, title, img, price } = details.service || {};
 
   const handelBooking = async (event) => {
     event.preventDefault();
@@ -46,9 +46,9 @@ const CheckoutPage = async ({ params }) => {
     }
   };
 
-  useEffect(() => {
-    loadService();
-  }, [params]);
+  // useEffect(() => {
+  //   loadService();
+  // }, [params]);
   return (
     <div className="container mx-auto my-10">
       <div className="relative">
@@ -85,7 +85,7 @@ const CheckoutPage = async ({ params }) => {
           />
           <input
             type="date"
-            defaultValue={new Date().toString()}
+            defaultValue={new Date().toISOString().substring(0, 10)}
             name="date"
             className="bg-white px-5 border-none rounded py-3 "
             placeholder="date: "

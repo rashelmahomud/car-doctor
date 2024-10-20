@@ -9,10 +9,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 
 export default function SignUp() {
+  const router = useRouter();
   const handelSignUp = async (e) => {
-    const router = useRouter();
     e.preventDefault();
     const newUser = {
       name: e.target.name.value,
@@ -26,7 +27,13 @@ export default function SignUp() {
         "content-type": "application/json",
       },
     });
-    // console.log(resp);
+
+    if (resp.ok) {
+      toast.success("user joined successfully");
+    } else {
+      toast.error("have a issus error this signup");
+    }
+
     if (resp.status === 200) {
       e.target.reset();
       router.push("/");
