@@ -3,6 +3,7 @@ import { useSession } from "next-auth/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 const Bookingpage = () => {
   const session = useSession();
@@ -14,6 +15,23 @@ const Bookingpage = () => {
     );
     const data = await res.json();
     setBookings(data.bookings);
+  };
+
+  const handelDelete = async (id) => {
+    const res = await fetch(
+      `http://localhost:3000/my-booking/api/delete/${id}`,
+      {
+        method: "DELETE",
+      }
+    );
+
+    const result = res.json();
+    if (res.ok) {
+      toast.success("successfully deleted items");
+      loadBooking();
+    } else {
+      toast.error("have a some issus for the items deleted");
+    }
   };
 
   useEffect(() => {
@@ -68,11 +86,13 @@ const Bookingpage = () => {
                           Edit
                         </button>
                       </Link>
-                      <Link href="/delete">
-                        <button className="btn bg-red-700 border-none text-white font-semibold">
-                          Delete
-                        </button>
-                      </Link>
+
+                      <button
+                        onClick={() => handelDelete(_id)}
+                        className="btn bg-red-700 border-none text-white font-semibold"
+                      >
+                        Delete
+                      </button>
                     </div>
                   </td>
                 </tr>
