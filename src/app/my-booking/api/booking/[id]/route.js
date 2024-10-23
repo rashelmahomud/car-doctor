@@ -38,10 +38,27 @@ export const PATCH = async (request, { params }) => {
     );
     return Response.json({
       messege: "successfully update items server",
-      responce: res,
+      data: res,
     });
   } catch (error) {
     return Response.json({ messege: "somthing want wrong" });
   }
 };
 //===============
+
+export const GET = async (request, { params }) => {
+  const db = await connectDB();
+  const deleteCollection = await db.collection("bookings");
+
+  try {
+    const res = await deleteCollection.findOne({
+      _id: new ObjectId(params.id),
+    });
+    return Response.json({
+      messege: "successfully found",
+      responce: res,
+    });
+  } catch (error) {
+    return Response.json({ messege: "somthing want wrong" });
+  }
+};

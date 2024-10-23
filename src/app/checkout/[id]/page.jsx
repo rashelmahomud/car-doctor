@@ -41,6 +41,7 @@ const CheckoutPage = async ({ params }) => {
     });
     if (res.ok) {
       toast.success("successfull booking your product");
+      event.target.reset();
     } else {
       toast.error("have some issu for this booking");
     }
