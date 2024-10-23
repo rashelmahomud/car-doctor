@@ -81,7 +81,7 @@ const Bookingpage = () => {
                   <td>{email}</td>
                   <td>
                     <div className="flex items-center gap-3 mx-3">
-                      <Link href="/edit">
+                      <Link href={`/my-booking/update/${_id}`}>
                         <button className="btn bg-green-700 border-none text-white font-semibold">
                           Edit
                         </button>
