@@ -9,11 +9,14 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import SocialSignIn from "@/components/shared/SocialSignin";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import toast from "react-hot-toast";
 
 export default function LoginPage() {
   const router = useRouter();
+
+  const searchParams = useSearchParams();
+  const path = searchParams.get("redirect");
   const handleSubmit = async (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -21,7 +24,8 @@ export default function LoginPage() {
     const resp = await signIn("credentials", {
       email,
       password,
-      redirect: false,
+      redirect: true,
+      callbackUrl: path ? path : "/",
     });
     if (resp.ok) {
       toast.success("successfully joined..");

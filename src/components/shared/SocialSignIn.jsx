@@ -6,14 +6,19 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { signIn, useSession } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 
 const SocialSignin = () => {
   const router = useRouter();
+  const searchParams = useSearchParams();
+  const path = searchParams.get("redirect");
   const { status } = useSession();
   const handelSocialLogin = async (provider) => {
-    const resp = signIn(provider);
+    const resp = signIn(provider, {
+      redirect: true,
+      callbackUrl: path ? path : "/",
+    });
   };
 
   useEffect(() => {
