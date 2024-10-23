@@ -22,6 +22,7 @@ export const getServiceDetails = async (id) => {
         cache: "no-cache",
       }
     );
+    console.log(res);
     const service = await res.json();
     return service;
   } catch (error) {

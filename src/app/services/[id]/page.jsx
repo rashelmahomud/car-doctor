@@ -12,7 +12,6 @@ export const metadata = {
 
 const SearviceDetails = async ({ params }) => {
   const data = await getServiceDetails(params.id);
-
   const { _id, title, img, price, description, facility } = data.service;
   return (
     <div className="container mx-auto">

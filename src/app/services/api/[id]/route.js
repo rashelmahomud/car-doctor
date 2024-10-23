@@ -7,6 +7,7 @@ export const GET = async (request, { params }) => {
 
   try {
     const service = await serviceCollection.findOne({ _id: params.id });
+    console.log(service);
     return NextResponse.json({ service });
   } catch (error) {
     return NextResponse.json({

@@ -9,6 +9,6 @@ export const GET = async () => {
     const service = await serviceCollection.find().toArray();
     return NextResponse.json({ service });
   } catch (error) {
-    return NextResponse.json({ messege: "have a issus from get all", error });
+    return NextResponse.json({ messege: "have a issus from get all" });
   }
 };

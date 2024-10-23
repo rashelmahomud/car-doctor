@@ -16,6 +16,6 @@ export const connectDB = async () => {
     db = client.db("care-doctor");
     return db;
   } catch (error) {
-    return NextResponse("this is a error", error);
+    return NextResponse.json("this is a error", error);
   }
 };
