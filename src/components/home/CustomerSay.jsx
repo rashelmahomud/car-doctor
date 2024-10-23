@@ -1,6 +1,7 @@
 import { faStar } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CustomerSay() {
   return (
@@ -462,18 +463,18 @@ export default function CustomerSay() {
           </div>
         </div>
         <div className="flex w-full justify-center gap-2 py-2">
-          <a href="#item1" className="btn btn-xs">
+          <Link href="#item1" className="btn btn-xs">
             1
-          </a>
-          <a href="#item2" className="btn btn-xs">
+          </Link>
+          <Link href="#item2" className="btn btn-xs">
             2
-          </a>
-          <a href="#item3" className="btn btn-xs">
+          </Link>
+          <Link href="#item3" className="btn btn-xs">
             3
-          </a>
-          <a href="#item4" className="btn btn-xs">
+          </Link>
+          <Link href="#item4" className="btn btn-xs">
             4
-          </a>
+          </Link>
         </div>
       </div>
     </div>
