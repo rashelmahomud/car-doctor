@@ -49,7 +49,7 @@ const page = ({ params }) => {
     <div className="container mx-auto my-10">
       <div className="relative">
         <Image
-          src={""}
+          src={"/assets/images/banner/3.jpg"}
           alt="Sample Image"
           width={600}
           height={400}
