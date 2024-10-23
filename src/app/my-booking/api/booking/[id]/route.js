@@ -17,3 +17,33 @@ export const DELETE = async (request, { params }) => {
     return Response.json({ messege: "somthing want wrong" });
   }
 };
+
+//bookings update code
+export const PATCH = async (request, { params }) => {
+  const db = await connectDB();
+  const updateCollection = await db.collection("bookings");
+  const { phone, address, date } = await request.json();
+
+  try {
+    const res = await updateCollection.updateOne(
+      {
+        _id: new ObjectId(params.id),
+      },
+      {
+        $set: {
+          phone,
+          address,
+          date,
+        },
+      },
+      { upsert: true }
+    );
+    return Response.json({
+      messege: "successfully update items server",
+      responce: res,
+    });
+  } catch (error) {
+    return Response.json({ messege: "somthing want wrong" });
+  }
+};
+//===============
