@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function () {
+const About = () => {
   return (
     <div className="container mx-auto">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:py-20 py-3 lg:my-10 my-3">
@@ -43,4 +43,6 @@ export default function () {
       </div>
     </div>
   );
-}
+};
+
+export default About;

@@ -36,7 +36,7 @@ const Bookingpage = () => {
 
   useEffect(() => {
     loadBooking();
-  }, [session]);
+  }, [session, loadBooking]);
 
   return (
     <div className="container mx-auto">

@@ -24,7 +24,11 @@ export default function CustomerSay() {
               <div className="flex justify-items-center gap-5 lg:p-5 p-3">
                 <div className="avatar online">
                   <div className="w-12 rounded-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    <Image
+                      height={200}
+                      width={200}
+                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                    />
                   </div>
                 </div>
                 <div>
@@ -73,7 +77,11 @@ export default function CustomerSay() {
                 <div className="flex justify-items-center gap-5 lg:p-5 p-3">
                   <div className="avatar online">
                     <div className="w-12 rounded-full">
-                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                      <Image
+                        height={120}
+                        width={200}
+                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      />
                     </div>
                   </div>
                   <div>
@@ -127,7 +135,11 @@ export default function CustomerSay() {
               <div className="flex justify-items-center gap-5 lg:p-5 p-3">
                 <div className="avatar online">
                   <div className="w-12 rounded-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    <Image
+                      height={120}
+                      width={200}
+                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                    />
                   </div>
                 </div>
                 <div>
@@ -176,7 +188,11 @@ export default function CustomerSay() {
                 <div className="flex justify-items-center gap-5 lg:p-5 p-3">
                   <div className="avatar online">
                     <div className="w-12 rounded-full">
-                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                      <Image
+                        height={120}
+                        width={200}
+                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      />
                     </div>
                   </div>
                   <div>
@@ -230,7 +246,11 @@ export default function CustomerSay() {
               <div className="flex justify-items-center gap-5 lg:p-5 p-3">
                 <div className="avatar online">
                   <div className="w-12 rounded-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    <Image
+                      height={120}
+                      width={200}
+                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                    />
                   </div>
                 </div>
                 <div>
@@ -279,7 +299,11 @@ export default function CustomerSay() {
                 <div className="flex justify-items-center gap-5 lg:p-5 p-3">
                   <div className="avatar online">
                     <div className="w-12 rounded-full">
-                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                      <Image
+                        height={120}
+                        width={200}
+                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      />
                     </div>
                   </div>
                   <div>
@@ -333,7 +357,11 @@ export default function CustomerSay() {
               <div className="flex justify-items-center gap-5 lg:p-5 p-3">
                 <div className="avatar online">
                   <div className="w-12 rounded-full">
-                    <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                    <Image
+                      height={120}
+                      width={200}
+                      src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                    />
                   </div>
                 </div>
                 <div>
@@ -382,7 +410,11 @@ export default function CustomerSay() {
                 <div className="flex justify-items-center gap-5 lg:p-5 p-3">
                   <div className="avatar online">
                     <div className="w-12 rounded-full">
-                      <img src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                      <Image
+                        height={120}
+                        width={200}
+                        src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      />
                     </div>
                   </div>
                   <div>

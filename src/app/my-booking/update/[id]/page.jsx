@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
-const page = ({ params }) => {
+const UpdatePage = ({ params }) => {
   const { data } = useSession();
   const [booking, setBooking] = useState([]);
 
@@ -129,4 +129,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default UpdatePage;
