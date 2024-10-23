@@ -3,6 +3,7 @@ import NextAuth from "next-auth/next";
 import CredentialsProvider from "next-auth/providers/credentials";
 import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
+import { NextResponse } from "next/server";
 const bcrypt = require("bcrypt");
 
 const handler = NextAuth({
@@ -69,7 +70,7 @@ const handler = NextAuth({
             return user;
           }
         } catch (error) {
-          console.log(error, "this error from post social your");
+          return NextResponse.json({ messege: "have a issus from auth" });
         }
       } else {
         return user;

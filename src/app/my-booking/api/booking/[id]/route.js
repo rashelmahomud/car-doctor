@@ -1,5 +1,6 @@
 import { connectDB } from "@/lib/connectDB";
 import { ObjectId } from "mongodb";
+import { NextResponse } from "next/server";
 
 export const DELETE = async (request, { params }) => {
   const db = await connectDB();
@@ -9,12 +10,12 @@ export const DELETE = async (request, { params }) => {
     const res = await deleteCollection.deleteOne({
       _id: new ObjectId(params.id),
     });
-    return Response.json({
+    return NextResponse.json({
       messege: "successfully deleted items server",
       responce: res,
     });
   } catch (error) {
-    return Response.json({ messege: "somthing want wrong" });
+    return NextResponse.json({ messege: "somthing want wrong" });
   }
 };
 
@@ -36,12 +37,12 @@ export const PATCH = async (request, { params }) => {
       },
       { upsert: true }
     );
-    return Response.json({
+    return NextResponse.json({
       messege: "successfully update items server",
       data: res,
     });
   } catch (error) {
-    return Response.json({ messege: "somthing want wrong" });
+    return NextResponse.json({ messege: "somthing want wrong" });
   }
 };
 //===============
@@ -54,11 +55,11 @@ export const GET = async (request, { params }) => {
     const res = await deleteCollection.findOne({
       _id: new ObjectId(params.id),
     });
-    return Response.json({
+    return NextResponse.json({
       messege: "successfully found",
       responce: res,
     });
   } catch (error) {
-    return Response.json({ messege: "somthing want wrong" });
+    return NextResponse.json({ messege: "somthing want wrong" });
   }
 };

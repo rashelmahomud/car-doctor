@@ -11,7 +11,7 @@ const Bookingpage = () => {
 
   const loadBooking = async () => {
     const res = await fetch(
-      `http://localhost:3000/my-booking/api/${session?.data?.user?.email}`
+      `${process.env.NEXT_PUBLIC_BASE_URL}/my-booking/api/${session?.data?.user?.email}`
     );
     const data = await res.json();
     setBookings(data.bookings);
@@ -19,7 +19,7 @@ const Bookingpage = () => {
 
   const handelDelete = async (id) => {
     const res = await fetch(
-      `http://localhost:3000/my-booking/api/booking/${id}`,
+      `${process.env.NEXT_PUBLIC_BASE_URL}/my-booking/api/booking/${id}`,
       {
         method: "DELETE",
       }

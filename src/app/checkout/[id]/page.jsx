@@ -34,11 +34,14 @@ const CheckoutPage = async ({ params }) => {
       servicePrice: price,
     };
 
-    const res = await fetch("http://localhost:3000/checkout/api/new-booking", {
-      method: "POST",
-      body: JSON.stringify(newBooking),
-      headers: { "content-type": "application/json" },
-    });
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_BASE_URL}/checkout/api/new-booking`,
+      {
+        method: "POST",
+        body: JSON.stringify(newBooking),
+        headers: { "content-type": "application/json" },
+      }
+    );
     if (res.ok) {
       toast.success("successfull booking your product");
       event.target.reset();

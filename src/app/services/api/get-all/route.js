@@ -1,4 +1,5 @@
 import { connectDB } from "@/lib/connectDB";
+import { NextResponse } from "next/server";
 
 export const GET = async () => {
   const db = await connectDB();
@@ -6,8 +7,8 @@ export const GET = async () => {
 
   try {
     const service = await serviceCollection.find().toArray();
-    return Response.json({ service });
+    return NextResponse.json({ service });
   } catch (error) {
-    console.log(error);
+    return NextResponse.json({ messege: "have a issus from get all", error });
   }
 };

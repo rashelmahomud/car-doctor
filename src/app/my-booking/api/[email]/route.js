@@ -1,4 +1,5 @@
 import { connectDB } from "@/lib/connectDB";
+import { NextResponse } from "next/server";
 
 export const GET = async (request, { params }) => {
   const db = await connectDB();
@@ -8,8 +9,8 @@ export const GET = async (request, { params }) => {
     const bookings = await bookingsCollection
       .find({ email: params.email })
       .toArray();
-    return Response.json({ bookings });
+    return NextResponse.json({ bookings });
   } catch (error) {
-    console.log("this is a error", error);
+    return NextResponse.json({ messege: "have a issus from api email", error });
   }
 };
