@@ -19,7 +19,7 @@ const Bookingpage = () => {
 
   const handelDelete = async (id) => {
     const res = await fetch(
-      `http://localhost:3000/my-booking/api/delete/${id}`,
+      `http://localhost:3000/my-booking/api/booking/${id}`,
       {
         method: "DELETE",
       }
