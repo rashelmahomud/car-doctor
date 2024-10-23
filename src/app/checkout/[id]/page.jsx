@@ -5,10 +5,10 @@ import toast from "react-hot-toast";
 
 const { default: Image } = require("next/image");
 
-const metadata = {
-  title: "service checkout",
-  description: "car-doctor checkout details",
-};
+// const metadata = {
+//   title: "service checkout",
+//   description: "car-doctor checkout details",
+// };
 
 const CheckoutPage = async ({ params }) => {
   const { data } = useSession();
