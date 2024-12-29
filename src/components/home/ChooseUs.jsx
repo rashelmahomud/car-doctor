@@ -9,7 +9,7 @@ export default function ChooseUs() {
         <h2 className="text-4xl font-bold">Why Choose Us</h2>
         <p className="text-gray-500">
           the majority have suffered alteration in some form, by injected
-          humour, or randomised <br /> words which don't look even slightly
+          humour, or randomised <br /> words which don t look even slightly
           believable.
         </p>
       </div>

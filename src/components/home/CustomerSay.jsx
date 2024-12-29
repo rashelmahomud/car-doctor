@@ -12,7 +12,7 @@ export default function CustomerSay() {
         <p className="text-gray-500">
           the majority have suffered alteration in some form, by injected
           humour, or randomised
-          <br /> words which don't look even slightly believable.
+          <br /> words which don  t look even slightly believable.
         </p>
       </div>
       <div className="my-10">
@@ -29,6 +29,7 @@ export default function CustomerSay() {
                       height={200}
                       width={200}
                       src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      alt="image"
                     />
                   </div>
                 </div>
@@ -47,7 +48,7 @@ export default function CustomerSay() {
               <p className="my-3">
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even
+                injected humour, or randomised words which don t look even
                 slightly believable.
               </p>
               <div className="flex gap-1">
@@ -82,6 +83,7 @@ export default function CustomerSay() {
                         height={120}
                         width={200}
                         src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                        alt="image"
                       />
                     </div>
                   </div>
@@ -100,7 +102,7 @@ export default function CustomerSay() {
                 <p className="my-3">
                   There are many variations of passages of Lorem Ipsum
                   available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
+                  form, by injected humour, or randomised words which don t look
                   even slightly believable.
                 </p>
                 <div className="flex gap-1">
@@ -140,6 +142,7 @@ export default function CustomerSay() {
                       height={120}
                       width={200}
                       src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      alt="image"
                     />
                   </div>
                 </div>
@@ -158,7 +161,7 @@ export default function CustomerSay() {
               <p className="my-3">
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even
+                injected humour, or randomised words which don t look even
                 slightly believable.
               </p>
               <div className="flex gap-1">
@@ -193,6 +196,7 @@ export default function CustomerSay() {
                         height={120}
                         width={200}
                         src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                        alt="image"
                       />
                     </div>
                   </div>
@@ -211,7 +215,7 @@ export default function CustomerSay() {
                 <p className="my-3">
                   There are many variations of passages of Lorem Ipsum
                   available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
+                  form, by injected humour, or randomised words which don t look
                   even slightly believable.
                 </p>
                 <div className="flex gap-1">
@@ -251,6 +255,7 @@ export default function CustomerSay() {
                       height={120}
                       width={200}
                       src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      alt="image"
                     />
                   </div>
                 </div>
@@ -269,7 +274,7 @@ export default function CustomerSay() {
               <p className="my-3">
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even
+                injected humour, or randomised words which don t look even
                 slightly believable.
               </p>
               <div className="flex gap-1">
@@ -304,6 +309,7 @@ export default function CustomerSay() {
                         height={120}
                         width={200}
                         src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                        alt="image"
                       />
                     </div>
                   </div>
@@ -322,7 +328,7 @@ export default function CustomerSay() {
                 <p className="my-3">
                   There are many variations of passages of Lorem Ipsum
                   available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
+                  form, by injected humour, or randomised words which don t look
                   even slightly believable.
                 </p>
                 <div className="flex gap-1">
@@ -362,6 +368,7 @@ export default function CustomerSay() {
                       height={120}
                       width={200}
                       src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                      alt="image"
                     />
                   </div>
                 </div>
@@ -380,7 +387,7 @@ export default function CustomerSay() {
               <p className="my-3">
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form, by
-                injected humour, or randomised words which don't look even
+                injected humour, or randomised words which don t look even
                 slightly believable.
               </p>
               <div className="flex gap-1">
@@ -415,6 +422,7 @@ export default function CustomerSay() {
                         height={120}
                         width={200}
                         src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                        alt="image"
                       />
                     </div>
                   </div>
@@ -433,7 +441,7 @@ export default function CustomerSay() {
                 <p className="my-3">
                   There are many variations of passages of Lorem Ipsum
                   available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
+                  form, by injected humour, or randomised words which don t look
                   even slightly believable.
                 </p>
                 <div className="flex gap-1">
