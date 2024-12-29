@@ -14,8 +14,8 @@ const SocialSignin = () => {
   const searchParams = useSearchParams();
   const path = searchParams.get("redirect");
   const { status } = useSession();
-  const handelSocialLogin = async (provider) => {
-    const resp = signIn(provider, {
+  const handleSocialLogin = async (provider) => {
+    const resp = await signIn(provider, {
       redirect: true,
       callbackUrl: path ? path : "/",
     });
@@ -30,12 +30,12 @@ const SocialSignin = () => {
   return (
     <div className="flex lg:space-x-10 justify-center items-center gap-3 p-3 ">
       <FontAwesomeIcon
-        onClick={() => handelSocialLogin("google")}
+        onClick={() => handleSocialLogin("google")}
         className="w-5 btn btn-outline"
         icon={faGoogle}
       />
       <FontAwesomeIcon
-        onClick={() => handelSocialLogin("github")}
+        onClick={() => handleSocialLogin("github")}
         className="w-5 btn btn-outline"
         icon={faGithub}
       />
