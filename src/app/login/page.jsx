@@ -8,9 +8,9 @@ import {
   faGoogle,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import SocialSignIn from "@/components/shared/SocialSignin";
 import { useRouter, useSearchParams } from "next/navigation";
 import toast from "react-hot-toast";
+import SocialSignin from "@/components/shared/SocialSignin";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -80,7 +80,7 @@ export default function LoginPage() {
           >
             Submit
           </button>
-          <SocialSignIn />
+          <SocialSignin />
           <div>
             <Link href="/signup" className="text-center text-primary">
               Regestart Account

@@ -1,5 +1,5 @@
 "use client";
-import SocialSignIn from "@/components/shared/SocialSignin";
+import SocialSignin from "@/components/shared/SocialSignin";
 import {
   faGithub,
   faGoogle,
@@ -89,7 +89,7 @@ export default function SignUp() {
           >
             Singup
           </button>
-          <SocialSignIn />
+          <SocialSignin />
           <div className="text-center">
             <Link href="/login" className="font-semibold text-primary">
               Have a Account
