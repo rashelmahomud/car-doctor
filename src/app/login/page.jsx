@@ -2,12 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { signIn } from "next-auth/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faGithub,
-  faGoogle,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
 import { useRouter, useSearchParams } from "next/navigation";
 import toast from "react-hot-toast";
 import SocialSignin from "@/components/shared/SocialSignin";

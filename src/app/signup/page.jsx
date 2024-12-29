@@ -1,11 +1,5 @@
 "use client";
 import SocialSignin from "@/components/shared/SocialSignin";
-import {
-  faGithub,
-  faGoogle,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
